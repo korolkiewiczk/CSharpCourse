@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
+    <Compile Include="Calculator0.cs" />
+    <Compile Include="Calculator1.cs" />
+    <Compile Include="Calculator2.cs" />
+    <Compile Include="Calculator3.cs" />
     <Compile Include="PPMMOperatorsExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

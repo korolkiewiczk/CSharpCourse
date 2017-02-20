@@ -6,8 +6,21 @@ namespace P13Functions
     {
         static void Main(string[] args)
         {
+            if (args.Length == 0) { ExampleMain(); return; }
             switch (args[0])
             {
+                case "1":
+                    Calculator0.Entry();
+                    break;
+                case "2":
+                    Calculator1.Entry();
+                    break;
+                case "3":
+                    Calculator2.Entry();
+                    break;
+                case "4":
+                    Calculator3.Entry();
+                    break;
                 case "++":
                     PPMMOperatorsExample.Example();
                     break;
