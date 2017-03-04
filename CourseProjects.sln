@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P12Conditionals", "P12Condi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P13Functions", "P13Functions\P13Functions.csproj", "{B42DBDE2-3F68-4CA6-AA48-5172B5673CE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{9D33C613-8DBC-450C-91B2-B3D60ACC714C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P14ListsAndFiles", "P14ListsAndFiles\P14ListsAndFiles.csproj", "{76058E28-1258-4220-ACE3-3B449D5C1E6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{B42DBDE2-3F68-4CA6-AA48-5172B5673CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B42DBDE2-3F68-4CA6-AA48-5172B5673CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B42DBDE2-3F68-4CA6-AA48-5172B5673CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D33C613-8DBC-450C-91B2-B3D60ACC714C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D33C613-8DBC-450C-91B2-B3D60ACC714C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D33C613-8DBC-450C-91B2-B3D60ACC714C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D33C613-8DBC-450C-91B2-B3D60ACC714C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
