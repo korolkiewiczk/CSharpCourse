@@ -26,7 +26,7 @@ namespace P14ListsAndFiles
             {
                 var line = Console.ReadLine();
                 if (line == "#exit") break;
-                if (line.Length > 0 && line[0] == '#' && (line.Length == 1 || line[1] != '#'))
+                if (CheckInputIsAFunction(line))
                 {
                     try
                     {
@@ -43,6 +43,11 @@ namespace P14ListsAndFiles
                     _buffer.Add(line);
                 }
             }
+        }
+
+        private static bool CheckInputIsAFunction(string line)
+        {
+            return line.Length > 0 && line[0] == '#' && (line.Length == 1 || line[1] != '#');
         }
 
         private static void ShowInfo()
@@ -70,8 +75,8 @@ namespace P14ListsAndFiles
             var toFind = args[0].ToLower();
             var output = _buffer
                 .Select((x, i) => new { item = x, index = i })
-                .Where(x => x.item.ToLower().Contains(toFind))
-                .Select(x => $"Line {x.index}:{x.item}").ToArray();
+                    .Where(x => x.item.ToLower().Contains(toFind))
+                        .Select(x => $"Line {x.index}:{x.item}").ToArray();
 
             if (output.Length == 0)
             {
