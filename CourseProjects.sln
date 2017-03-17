@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P14ListsAndFiles", "P14ListsAndFiles\P14ListsAndFiles.csproj", "{76058E28-1258-4220-ACE3-3B449D5C1E6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P21Classes", "P21Classes\P21Classes.csproj", "{9AB4BD15-ED6A-47AD-859F-D3792741B6AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76058E28-1258-4220-ACE3-3B449D5C1E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB4BD15-ED6A-47AD-859F-D3792741B6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB4BD15-ED6A-47AD-859F-D3792741B6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB4BD15-ED6A-47AD-859F-D3792741B6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB4BD15-ED6A-47AD-859F-D3792741B6AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
