@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace P21Classes
 {
     class SegParser
     {
-        private Segregator _segregator;
-        private SegViewer _viewer;
+        private readonly Dictionary<string, Action<string[]>> _commands;
+        private readonly SegCommands _segCommands;
 
         public SegParser(Segregator segregator, SegViewer viewer)
         {
-            _segregator = segregator;
-            _viewer = viewer;
+            _segCommands = new SegCommands(segregator, viewer);
+            _commands = new Dictionary<string, Action<string[]>>()
+            {
+                {"+", _segCommands.AddFile},
+                {"-", _segCommands.RemoveFile },
+                {"#", _segCommands.ShowFiles }
+            };
         }
 
         public void ParseCommand(string input)
@@ -26,14 +29,13 @@ namespace P21Classes
 
         private void InvokeCommand(string cmd, string[] parameters)
         {
-            switch (cmd)
+            try
             {
-                case "+":
-                    _segregator.AddFile(parameters[0], new File(parameters[1]));
-                    break;
-                case "-":
-                    _segregator.DeleteFile(Convert.ToInt32(parameters[0]));
-                    break;
+                _commands[cmd](parameters);
+            }
+            catch
+            {
+                Console.WriteLine("Invalid command");
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace P21Classes
 {
@@ -7,6 +8,8 @@ namespace P21Classes
         private List<File> _files = new List<File>();
 
         public string Name { get; set; }
+
+        public List<File> Files => _files;
 
         public Category(string name)
         {
@@ -20,9 +23,15 @@ namespace P21Classes
             return file.Id;
         }
 
-        public void DeleteFile(File file)
+        /// <summary>
+        /// Zwraca false jeśli kategoria nie zawiera już żadnego pliku
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        public bool DeleteFile(File file)
         {
             _files.Remove(file);
+            return _files.Any();
         }
     }
 }

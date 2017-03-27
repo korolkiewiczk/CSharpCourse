@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace P21Classes
+﻿namespace P21Classes
 {
     class File
     {
@@ -13,11 +7,17 @@ namespace P21Classes
         public int Id { get; }
         public string Text { get; private set; }
         public Category Category { get; set; }
+        public string CategoryName => Category.Name;
 
         public File(string text)
         {
             Text = text;
             Id = _globalId++;
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}:{Text}";
         }
     }
 }

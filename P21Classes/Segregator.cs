@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace P21Classes
 {
@@ -11,12 +8,15 @@ namespace P21Classes
         private Dictionary<string, Category> _categories = new Dictionary<string, Category>();
         private Dictionary<int, File> _fileIndex = new Dictionary<int, File>();
 
+        public List<Category> Categories => _categories.Select(x => x.Value).ToList();
+
         public int AddFile(string categoryName, File file)
         {
             Category category;
             if (!_categories.ContainsKey(categoryName))
             {
                 category = new Category(categoryName);
+                _categories.Add(categoryName, category);
             }
             else
             {
@@ -35,7 +35,11 @@ namespace P21Classes
             {
                 var file = GetFile(id);
                 _fileIndex.Remove(id);
-                _categories[file.Category.Name].DeleteFile(file);
+                bool isAnyFileInCategory = _categories[file.CategoryName].DeleteFile(file);
+                if (!isAnyFileInCategory)
+                {
+                    _categories.Remove(file.CategoryName);
+                }
             }
             catch
             {
@@ -47,6 +51,18 @@ namespace P21Classes
         public File GetFile(int id)
         {
             return _fileIndex[id];
+        }
+
+        public List<File> GetFilesFromCategory(string categoryName)
+        {
+            if (_categories.ContainsKey(categoryName))
+            {
+                return _categories[categoryName].Files;
+            }
+            else
+            {
+                return new List<File>();
+            }
         }
     }
 }
